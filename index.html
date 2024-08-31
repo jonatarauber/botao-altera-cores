@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 1.8em;
+            margin: 10px;
+            padding: 10px;
+            margin-left: 50px;
+
+        }
+    </style>
+    <title>Botão muda cor</title>
+</head>
+<body>
+    <h1>Clique no botão para alterar a cor</h1>
+    
+    <button>Clique aqui</button>
+    
+    <script>
+        var btn = document.querySelector("button");
+
+        function random(number){
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+        btn.onclick = function(){
+            var color = "rgba(" + random(255) + "," + random(255) + "," + random(255) +")";
+            document.body.style.backgroundColor = color; 
+        }
+    </script>
+</body>
+</html>
